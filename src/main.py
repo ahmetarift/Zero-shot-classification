@@ -55,18 +55,17 @@ def main():
     model_path, data_path = get_model_data_path(parent)
     candidate_sentiments, candidate_intentions = get_labels(parent)
 
+    # Load the data
     with open(data_path) as f:
         data = json.load(f)
 
     classifier = pipeline(task="zero-shot-classification",
                           model=model_path)
 
+    # Write the results to the console
     for sequence in data:
         print(f"Sequence: {sequence['message']}")
         print(f"Sentiment is: {create_output(sequence['message'], candidate_sentiments, classifier)}")
         print(f"Intention is: {create_output(sequence['message'], candidate_intentions, classifier)}\n")
 
-
-if __name__ == '__main__':
-    main()
 
