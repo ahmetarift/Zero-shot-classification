@@ -1,0 +1,82 @@
+[
+   {
+      "speaker":"customer",
+      "message":"Hello! I heard that the iPhone 14 has been released. Could you provide me with some more information?"
+   },
+   {
+      "speaker":"representative",
+      "message":"Hello! Of course, I'd be happy to help. Are you interested in learning about the features of the iPhone 14?"
+   },
+   {
+      "speaker":"customer",
+      "message":"Absolutely. Could you please give me some details about its features?"
+   },
+   {
+      "speaker":"representative",
+      "message":"Certainly, the iPhone 14 comes with a range of new features. Improved camera, faster processor, and longer battery life, to name a few."
+   },
+   {
+      "speaker":"customer",
+      "message":"That sounds great! What's the price range?"
+   },
+   {
+      "speaker":"representative",
+      "message":"The prices can vary depending on the specific model of the iPhone 14. Knowing your storage preference and color choice would help me provide you with the most accurate price."
+   },
+   {
+      "speaker":"customer",
+      "message":"I want a blue iPhone 14 with 256 GB of storage."
+   },
+   {
+      "speaker":"representative",
+      "message":"Got it. Thank you for your choice. Let me check the best price available for you."
+   },
+   {
+      "speaker":"customer",
+      "message":"Also, is there a trade-in option or any trade-in discounts available?"
+   },
+   {
+      "speaker":"representative",
+      "message":"Yes, we do offer trade-in discounts and trade-in options. If you bring in your old device, we can assess its value."
+   },
+   {
+      "speaker":"customer",
+      "message":"Great! I'd like to know the trade-in value then."
+   },
+   {
+      "speaker":"representative",
+      "message":"Certainly, to determine the trade-in value, we'll need to know the model and condition of your old device."
+   },
+   {
+      "speaker":"customer",
+      "message":"My old device is an iPhone 11 and it's in good condition."
+   },
+   {
+      "speaker":"representative",
+      "message":"Understood, thank you. I'll calculate the best trade-in value for you. Could you wait for a few minutes?"
+   },
+   {
+      "speaker":"customer",
+      "message":"Sure, I'll wait."
+   },
+   {
+      "speaker":"representative",
+      "message":"Thank you for your patience. For your iPhone 11, we can offer a trade-in value of $200."
+   },
+   {
+      "speaker":"customer",
+      "message":"I see, thank you. However, I think the price is not fair. I'll think about the price and get back to you."
+   },
+   {
+      "speaker":"representative",
+      "message":"Oh, I am sorry to hear that. Sadly, there is nothing I can do to change the situation. Feel free to reach out if you change your mind."
+   },
+   {
+      "speaker":"customer",
+      "message":"Thank you! I appreciate your patience."
+   },
+   {
+      "speaker":"representative",
+      "message":"You're welcome, we're always here for you. Have a great day!"
+   }
+]
