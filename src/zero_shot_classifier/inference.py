@@ -54,23 +54,3 @@ def create_output(message: str , candidates: list, classifier: pipeline) -> str:
     label = full_output['labels'][0]
     probability = full_output['scores'][0]
     return f"{label} with probability = {probability}"
-
-
-'''def main():
-    path = get_path()
-    model_path, data_path = get_model_data_path(path)
-    candidate_sentiments, candidate_intentions = get_labels(path)
-
-    # Load the data
-    with open(data_path) as f:
-        data = json.load(f)
-
-    classifier = pipeline(task="zero-shot-classification",
-                          model=model_path)
-
-    # Write the results to the console
-    for sequence in data:
-        print(f"Sequence: {sequence['message']}")
-        print(f"Sentiment is: {create_output(sequence['message'], candidate_sentiments, classifier)}")
-        print(f"Intention is: {create_output(sequence['message'], candidate_intentions, classifier)}\n")
-'''
