@@ -4,32 +4,38 @@ import configparser
 import json
 
 
-def get_parent_path() -> str:
-    """ Returns the parent path of the current working directory."""
+def get_path() -> str:
+    """ Returns the path of the current working directory with correct unicode format."""
 
     path = os.getcwd()
-    parent = os.path.dirname(path)
-    return parent.replace("\\", "/")
+    return path.replace("\\", "/")
 
 
-def get_model_data_path(parent: str) -> tuple:
+def get_model_data_path(path: str) -> tuple:
     """ Reads the config file and forms absolute model and data paths.
-        returns a tuple of the strings.(model_path, data_path)
+        Args:
+            path: current working directory
+        Returns:
+            a tuple of the lists.(model_path, data path)
     """
     config = configparser.ConfigParser()
-    config.read(f"{parent}/config/config.ini")
+    config.read(f"{path}/config/config.ini")
 
     relative_model_path = config['Paths']['model_path']
     relative_data_path = config['Paths']['data_path']
 
-    return parent + relative_model_path, parent + relative_data_path
+    return path + relative_model_path, path + relative_data_path
 
 
-def get_labels(parent:str) -> tuple:
+def get_labels(path:str) -> tuple:
     """ Reads the config file and forms a tuple of the labels for sentiment and intention.
-        returns a tuple of the lists.(sentiment_labels, intention_labels)"""
+        Args:
+            path: current working directory
+        Returns:
+            a tuple of the lists.(sentiment_labels, intention_labels)
+    """
     config = configparser.ConfigParser()
-    config.read(f"{parent}/config/config.ini")
+    config.read(f"{path}/config/config.ini")
 
     return json.loads(config['Labels']['sentiment']), json.loads(config['Labels']['intent'])
 
@@ -50,10 +56,10 @@ def create_output(message: str , candidates: list, classifier: pipeline) -> str:
     return f"{label} with probability = {probability}"
 
 
-def main():
-    parent = get_parent_path()
-    model_path, data_path = get_model_data_path(parent)
-    candidate_sentiments, candidate_intentions = get_labels(parent)
+'''def main():
+    path = get_path()
+    model_path, data_path = get_model_data_path(path)
+    candidate_sentiments, candidate_intentions = get_labels(path)
 
     # Load the data
     with open(data_path) as f:
@@ -67,5 +73,4 @@ def main():
         print(f"Sequence: {sequence['message']}")
         print(f"Sentiment is: {create_output(sequence['message'], candidate_sentiments, classifier)}")
         print(f"Intention is: {create_output(sequence['message'], candidate_intentions, classifier)}\n")
-
-
+'''
