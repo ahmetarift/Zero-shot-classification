@@ -1,4 +1,6 @@
 # Zero-shot-classification
-Zero shot text classification project
+Zero-shot text classification project with BART language model.
 
-Work in progress
+The directory "dist" contains the package distribution.
+The tutorial can be found as "example.py".
+
